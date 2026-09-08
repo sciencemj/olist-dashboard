@@ -18,6 +18,8 @@ MySQL:
 ```bash
 mysql -u <user> -p < 01_raw_data.sql   # CSV -> raw_*  (LOCAL INFILE 허용 필요)
 mysql -u <user> -p olist < 02_claen_table.sql   # raw_* -> clean_*  (MySQL 8.0+)
+mysql -u <user> -p olist < 03_add_foreign_keys.sql   # clean_* 외래키
+mysql -u <user> -p olist < 04_mart_tables.sql        # clean_* -> mart_*  (BI 도구용)
 ```
 
 DuckDB:
