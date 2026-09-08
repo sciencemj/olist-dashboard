@@ -4,9 +4,12 @@
 
 ![olist ERD](olist-ERD.png)
 
-`clean_*` 8개 테이블 사이의 연결선이 `03_add_foreign_keys.sql` 로 건 외래키 6개다.
+`clean_*` 사이의 연결선이 `03_add_foreign_keys.sql` 로 건 외래키 6개다.
 `raw_*` 는 적재 전용이라 FK 가 없어 선 없이 떠 있고, `clean_geolocation` 도 마찬가지로
 연결선이 없다 (아래 참고).
+
+`mart_orders` / `mart_order_items` 는 BI 도구가 바라보는 층이다. 이미 조인이 끝난
+결과라 서로 연결하지 않는다 (그레인이 달라 조인하면 행이 부풀려진다).
 
 > DBeaver 는 메타데이터를 캐싱한다. FK 를 건 뒤에도 선이 안 보이면
 > 좌측 트리에서 `olist` 우클릭 → Refresh (F5) 후 다이어그램 탭을 다시 연다.
