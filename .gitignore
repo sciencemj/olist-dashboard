@@ -1,0 +1,29 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Datasets (Kaggle Brazilian E-Commerce Public Dataset by Olist — download separately)
+data/
+
+# MySQL dump (136MB, exceeds GitHub file size limit)
+olist-raw-db.sql
+
+# DuckDB database built from data/
+*.duckdb
+*.duckdb.wal
+
+# DBeaver workspace (contains local connection credentials)
+sql-workspace/
+
+# Claude Code local state
+.claude/
+
+# macOS
+.DS_Store
