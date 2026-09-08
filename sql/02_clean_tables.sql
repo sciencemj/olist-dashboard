@@ -5,8 +5,8 @@
 --   - 문자열 정규화(TRIM, 도시명 소문자, 주 대문자)
 --   - 중복 제거(reviews, geolocation)
 --   - CTAS 후 PK / 인덱스 부여
--- 실행: mysql -u <user> -p olist < 02_claen_table.sql
--- 사전 조건: 01_raw_data.sql 로 raw_* 적재 완료. MySQL 8.0+ (윈도우 함수 사용)
+-- 실행: mysql -u <user> -p olist < sql/02_clean_tables.sql
+-- 사전 조건: sql/01_raw_data.sql 로 raw_* 적재 완료. MySQL 8.0+ (윈도우 함수 사용)
 -- =====================================================================
 
 USE olist;

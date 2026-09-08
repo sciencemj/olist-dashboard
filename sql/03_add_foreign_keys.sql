@@ -1,12 +1,12 @@
 -- =====================================================================
 -- 03. clean_* 외래키 설정
---   02_claen_table.sql 실행 직후에 돌린다.
+--   sql/02_clean_tables.sql 실행 직후에 돌린다.
 --
 --   clean_geolocation 은 FK 대상에서 제외한다. zip prefix 커버리지가
 --   불완전해서(customers 278행, sellers 7행이 매칭 없음) FK 를 걸면
 --   ALTER 가 실패한다. 좌표 참조용 lookup 테이블로만 둔다.
 --
--- 실행: mysql -u <user> -p olist < 03_add_foreign_keys.sql
+-- 실행: mysql -u <user> -p olist < sql/03_add_foreign_keys.sql
 -- =====================================================================
 
 USE olist;
@@ -122,9 +122,9 @@ ORDER BY rc.table_name, rc.constraint_name;
 --
 --   (a) 검사를 잠시 끄고 02 를 재실행한 뒤 03 을 다시 돌린다.
 --         SET FOREIGN_KEY_CHECKS = 0;
---         source 02_claen_table.sql
+--         source sql/02_clean_tables.sql
 --         SET FOREIGN_KEY_CHECKS = 1;
---         source 03_add_foreign_keys.sql
+--         source sql/03_add_foreign_keys.sql
 --
 --   (b) FK 를 먼저 떨어뜨린다. 03 을 재실행하기 전에도 이 블록이 필요하다
 --       (MySQL 에는 ADD CONSTRAINT IF NOT EXISTS 가 없다).

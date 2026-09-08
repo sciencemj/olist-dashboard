@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 04. clean_* -> mart_*  (BI 도구가 바로 붙는 층)
---   03_add_foreign_keys.sql 실행 이후에 돌린다.
+--   sql/03_add_foreign_keys.sql 실행 이후에 돌린다.
 --
 --   설계 원칙
 --   1. 그레인을 고정한다. mart_orders 는 1행 = 주문 1건,
@@ -13,7 +13,7 @@
 --
 --   BI 도구는 mart_* 만 바라보게 한다. raw_* / clean_* 은 노출하지 않는다.
 --
--- 실행: mysql -u <user> -p olist < 04_mart_tables.sql
+-- 실행: mysql -u <user> -p olist < sql/04_mart_tables.sql
 -- =====================================================================
 
 USE olist;

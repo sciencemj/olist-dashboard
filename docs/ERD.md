@@ -4,7 +4,7 @@
 
 ![olist ERD](olist-ERD.png)
 
-`clean_*` 사이의 연결선이 `03_add_foreign_keys.sql` 로 건 외래키 6개다.
+`clean_*` 사이의 연결선이 `../sql/03_add_foreign_keys.sql` 로 건 외래키 6개다.
 `raw_*` 는 적재 전용이라 FK 가 없어 선 없이 떠 있고, `clean_geolocation` 도 마찬가지로
 연결선이 없다 (아래 참고).
 
@@ -107,7 +107,7 @@ erDiagram
     clean_geolocation  ||--o{ clean_sellers         : "위치"
 ```
 
-FK 제약은 `03_add_foreign_keys.sql` 에서 6개를 건다.
+FK 제약은 `../sql/03_add_foreign_keys.sql` 에서 6개를 건다.
 
 `clean_geolocation` 만 예외로 FK 없이 둔다. zip prefix 커버리지가 불완전해서
 (customers 278행, sellers 7행이 매칭 없음) FK 를 걸면 ALTER 가 실패한다.
