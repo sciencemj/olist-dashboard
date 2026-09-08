@@ -22,10 +22,10 @@ kaggle datasets download -d olistbr/brazilian-ecommerce -p data --unzip
 
 ## 실행 순서
 
-MySQL:
+MySQL 은 리포 루트에서 실행한다. 01 의 CSV 경로가 루트 기준 상대경로다.
 
 ```bash
-mysql -u <user> -p < sql/01_raw_data.sql   # CSV -> raw_*  (LOCAL INFILE 허용 필요)
+mysql -u <user> -p --local-infile=1 < sql/01_raw_data.sql   # CSV -> raw_*
 mysql -u <user> -p olist < sql/02_clean_tables.sql   # raw_* -> clean_*  (MySQL 8.0+)
 mysql -u <user> -p olist < sql/03_add_foreign_keys.sql   # clean_* 외래키
 mysql -u <user> -p olist < sql/04_mart_tables.sql        # clean_* -> mart_*  (BI 도구용)

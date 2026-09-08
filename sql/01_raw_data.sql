@@ -1,3 +1,17 @@
+-- =====================================================================
+-- 01. CSV -> raw_*
+--   모든 컬럼을 VARCHAR/TEXT 로 받아 LOAD DATA 가 행을 거부하지 않게 한다.
+--   타입 변환은 sql/02_clean_tables.sql 로 미룬다.
+--
+--   경로는 리포 루트 기준 상대경로다. LOCAL 이 붙어 있어서 파일을 찾는 주체가
+--   서버가 아니라 mysql 클라이언트이고, 기준은 클라이언트의 작업 디렉토리다.
+--   따라서 반드시 리포 루트에서 실행한다.
+--
+--   실행: mysql -u <user> -p --local-infile=1 < sql/01_raw_data.sql
+--   서버 쪽에도 local_infile 이 켜져 있어야 한다:
+--     SET GLOBAL local_infile = 1;
+-- =====================================================================
+
 CREATE DATABASE IF NOT EXISTS olist;
 USE olist;
 
@@ -12,7 +26,7 @@ CREATE TABLE raw_customers (
     customer_state VARCHAR(10)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_customers_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_customers_dataset.csv'
 INTO TABLE raw_customers
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -34,7 +48,7 @@ CREATE TABLE raw_orders (
     order_estimated_delivery_date VARCHAR(30)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_orders_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_orders_dataset.csv'
 INTO TABLE raw_orders
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -55,7 +69,7 @@ CREATE TABLE raw_order_items (
     freight_value VARCHAR(30)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_order_items_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_order_items_dataset.csv'
 INTO TABLE raw_order_items
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -74,7 +88,7 @@ CREATE TABLE raw_order_payments (
     payment_value VARCHAR(30)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_order_payments_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_order_payments_dataset.csv'
 INTO TABLE raw_order_payments
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -95,7 +109,7 @@ CREATE TABLE raw_order_reviews (
     review_answer_timestamp VARCHAR(30)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_order_reviews_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_order_reviews_dataset.csv'
 INTO TABLE raw_order_reviews
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -119,7 +133,7 @@ CREATE TABLE raw_products (
     product_width_cm VARCHAR(30)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_products_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_products_dataset.csv'
 INTO TABLE raw_products
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -137,7 +151,7 @@ CREATE TABLE raw_sellers (
     seller_state VARCHAR(10)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_sellers_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_sellers_dataset.csv'
 INTO TABLE raw_sellers
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -156,7 +170,7 @@ CREATE TABLE raw_geolocation (
     geolocation_state VARCHAR(10)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/olist_geolocation_dataset.csv'
+LOAD DATA LOCAL INFILE 'data/olist_geolocation_dataset.csv'
 INTO TABLE raw_geolocation
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -172,7 +186,7 @@ CREATE TABLE raw_category_translation (
     product_category_name_english VARCHAR(100)
 );
 
-LOAD DATA LOCAL INFILE '/Users/sciencemj/dev/olist-dashboard/data/product_category_name_translation.csv'
+LOAD DATA LOCAL INFILE 'data/product_category_name_translation.csv'
 INTO TABLE raw_category_translation
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
