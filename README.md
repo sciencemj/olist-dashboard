@@ -38,3 +38,15 @@ DuckDB:
 uv sync
 uv run jupyter lab notebooks/duckdb_data_preprocess.ipynb   # data/*.csv -> olist.duckdb
 ```
+## 대시보드
+
+Superset 을 Docker 로 띄우고 `mart_orders` / `mart_order_items` 두 개만 연결한다.
+컨테이너에서 호스트 MySQL 로 나가므로 접속 주소는 `localhost` 가 아니라
+`host.docker.internal` 이다.
+
+```
+mysql+pymysql://superset:superset@host.docker.internal:3306/olist
+```
+
+두 mart 를 BI 도구 안에서 다시 조인하지 않는다. 그레인이 달라 행이 부풀려진다.
+스키마는 [docs/ERD.md](docs/ERD.md) 참고.
