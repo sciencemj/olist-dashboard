@@ -2,6 +2,8 @@
 
 Brazilian e-commerce (Olist) 데이터 분석.
 
+![Superset 대시보드](docs/olist_dashboard.jpg)
+
 ## 구조
 
 ```
@@ -50,3 +52,17 @@ mysql+pymysql://superset:superset@host.docker.internal:3306/olist
 
 두 mart 를 BI 도구 안에서 다시 조인하지 않는다. 그레인이 달라 행이 부풀려진다.
 스키마는 [docs/ERD.md](docs/ERD.md) 참고.
+
+차트 구성:
+
+| 차트 | 데이터셋 |
+|---|---|
+| 월별 매출 추이 | `mart_orders` |
+| 주별 매출 지도 (Country Map) | `mart_orders` |
+| 결제수단 비중 | `mart_orders` |
+| 주별 배송 소요일 | `mart_orders` |
+| 배송 소요일 분포 | `mart_orders` |
+| 지연 배송 비율 | `mart_orders` |
+| 주문 밀도 격자 지도 | `mart_orders` |
+| 카테고리별 매출 비중 | `mart_order_items` |
+| 카테고리 동시구매 lift | 가상 데이터셋 (셀프 조인) |
