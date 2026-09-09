@@ -9,7 +9,7 @@ Brazilian e-commerce (Olist) 데이터 분석.
 ```
 sql/         MySQL 적재 -> 정제 -> mart 파이프라인. 번호 순서대로 실행
 notebooks/   DuckDB 로 CSV 를 바로 훑어보는 용도
-docs/        ERD
+docs/        ERD, 대시보드 이미지 및 Superset 내보내기
 data/        CSV 원본 (git 제외)
 ```
 
@@ -41,6 +41,10 @@ uv sync
 uv run jupyter lab notebooks/duckdb_data_preprocess.ipynb   # data/*.csv -> olist.duckdb
 ```
 ## 대시보드
+
+[Superset 내보내기 및 가져오기 안내](docs/superset/README.md):
+[ZIP 다운로드](docs/superset/olist_dashboard.zip)와
+[YAML 원본](docs/superset/olist_dashboard/)을 참고할 수 있다.
 
 Superset 을 Docker 로 띄우고 `mart_orders` / `mart_order_items` 두 개만 연결한다.
 컨테이너에서 호스트 MySQL 로 나가므로 접속 주소는 `localhost` 가 아니라

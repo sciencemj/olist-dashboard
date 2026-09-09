@@ -1,0 +1,406 @@
+dashboard_title: Olist Dashboard
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: ab9b8b19-f8e7-43f9-bdd4-bb7ae54fc3bc
+position:
+  CHART--MHbF9UKLVBfPvFUd6bQv:
+    children: []
+    id: CHART--MHbF9UKLVBfPvFUd6bQv
+    meta:
+      chartId: 107
+      height: 50
+      sliceName: Delivery Days Distribution
+      uuid: 9a7ce79f-07b6-4fdc-a305-dd5428d65bd9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-0pdx5w_lt1oo4iRoyHcQ_
+    type: CHART
+  CHART-38DK8vJTq_cq5x8jR6Jcj:
+    children: []
+    id: CHART-38DK8vJTq_cq5x8jR6Jcj
+    meta:
+      chartId: 105
+      height: 50
+      sliceName: Total Sales By Month
+      uuid: 0893b540-b9ce-41ec-9b3d-645da5056f7c
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-2PwtAn8Tj7SAlys5MlNyY
+    type: CHART
+  CHART-TPLjLRDWS80iUL23_fWbN:
+    children: []
+    id: CHART-TPLjLRDWS80iUL23_fWbN
+    meta:
+      chartId: 106
+      height: 50
+      sliceName: Primary Payment Ratio
+      uuid: 330d9241-67db-421b-b1ac-0da868a05306
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-2PwtAn8Tj7SAlys5MlNyY
+    type: CHART
+  CHART-Uk4wKx_ya1dEOXoKhrnxm:
+    children: []
+    id: CHART-Uk4wKx_ya1dEOXoKhrnxm
+    meta:
+      chartId: 104
+      height: 50
+      sliceName: Sales Map
+      uuid: f9541577-7988-46fb-b9b6-9bab9de39fe3
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-2PwtAn8Tj7SAlys5MlNyY
+    type: CHART
+  CHART-explore-108-1:
+    children: []
+    id: CHART-explore-108-1
+    meta:
+      chartId: 108
+      height: 50
+      sliceName: Delivery Days By State
+      uuid: 0bbe583a-d917-466f-9fa3-0ec049ecb20b
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-0pdx5w_lt1oo4iRoyHcQ_
+    type: CHART
+  CHART-explore-109-1:
+    children: []
+    id: CHART-explore-109-1
+    meta:
+      chartId: 109
+      height: 50
+      sliceName: Late Delivery Ratio
+      uuid: 004dd159-a8cf-43ea-b3b3-54dcb27b92b9
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-0pdx5w_lt1oo4iRoyHcQ_
+    type: CHART
+  CHART-explore-110-1:
+    children: []
+    id: CHART-explore-110-1
+    meta:
+      chartId: 110
+      height: 50
+      sliceName: Sales Ratio By Category
+      uuid: b2f17d6b-9a9f-40f2-917a-56318dacdb7a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-lCOIce0FICH2QZgYWKZEV
+    type: CHART
+  CHART-explore-111-1:
+    children: []
+    id: CHART-explore-111-1
+    meta:
+      chartId: 111
+      height: 50
+      sliceName: Category Pair Lift
+      uuid: 1faef038-84b2-4b6d-8564-24f6d06351cf
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-lCOIce0FICH2QZgYWKZEV
+    type: CHART
+  CHART-explore-112-1:
+    children: []
+    id: CHART-explore-112-1
+    meta:
+      chartId: 112
+      height: 50
+      sliceName: Orders Count Map By Grid
+      uuid: 6d5ff5f8-124d-4f0a-b7af-c58571df8d15
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-lCOIce0FICH2QZgYWKZEV
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-2PwtAn8Tj7SAlys5MlNyY
+    - ROW-0pdx5w_lt1oo4iRoyHcQ_
+    - ROW-lCOIce0FICH2QZgYWKZEV
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Olist Dashboard
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-0pdx5w_lt1oo4iRoyHcQ_:
+    children:
+    - CHART-explore-108-1
+    - CHART--MHbF9UKLVBfPvFUd6bQv
+    - CHART-explore-109-1
+    id: ROW-0pdx5w_lt1oo4iRoyHcQ_
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-2PwtAn8Tj7SAlys5MlNyY:
+    children:
+    - CHART-38DK8vJTq_cq5x8jR6Jcj
+    - CHART-Uk4wKx_ya1dEOXoKhrnxm
+    - CHART-TPLjLRDWS80iUL23_fWbN
+    id: ROW-2PwtAn8Tj7SAlys5MlNyY
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-lCOIce0FICH2QZgYWKZEV:
+    children:
+    - CHART-explore-111-1
+    - CHART-explore-112-1
+    - CHART-explore-110-1
+    id: ROW-lCOIce0FICH2QZgYWKZEV
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '105':
+      id: 105
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 106
+        - 107
+        - 108
+        - 109
+        - 110
+        - 111
+        - 112
+    '106':
+      id: 106
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 107
+        - 108
+        - 109
+        - 110
+        - 111
+        - 112
+    '107':
+      id: 107
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 106
+        - 108
+        - 109
+        - 110
+        - 111
+        - 112
+    '108':
+      id: 108
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 106
+        - 107
+        - 109
+        - 110
+        - 111
+        - 112
+    '109':
+      id: 109
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 106
+        - 107
+        - 108
+        - 110
+        - 111
+        - 112
+    '110':
+      id: 110
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 106
+        - 107
+        - 108
+        - 109
+        - 111
+        - 112
+    '112':
+      id: 112
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 106
+        - 107
+        - 108
+        - 109
+        - 110
+        - 111
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 104
+    - 105
+    - 106
+    - 107
+    - 108
+    - 109
+    - 110
+    - 111
+    - 112
+  native_filter_configuration: []
+  chart_customization_config: []
+  map_label_colors:
+    '0': '#1FA8C9'
+    '1': '#454E7C'
+    Late: '#1FA8C9'
+    Delivered On Time: '#454E7C'
+    credit_card: '#1FA8C9'
+    boleto: '#454E7C'
+    voucher: '#5AC189'
+    debit_card: '#FF7F44'
+    not_defined: '#666666'
+    <NULL>: '#E04355'
+    SUM(order_amount): '#1FA8C9'
+    SP: '#1FA8C9'
+    RJ: '#454E7C'
+    MG: '#5AC189'
+    RS: '#FF7F44'
+    PR: '#666666'
+    SC: '#E04355'
+    BA: '#FCC700'
+    DF: '#A868B7'
+    health_beauty: '#1FA8C9'
+    watches_gifts: '#454E7C'
+    bed_bath_table: '#5AC189'
+    sports_leisure: '#FF7F44'
+    computers_accessories: '#666666'
+    furniture_decor: '#E04355'
+    cool_stuff: '#FCC700'
+    housewares: '#A868B7'
+    auto: '#3CCCCB'
+    garden_tools: '#A38F79'
+    toys: '#8FD3E4'
+    baby: '#A1A6BD'
+    perfumery: '#ACE1C4'
+    telephony: '#FEC0A1'
+    office_furniture: '#B2B2B2'
+    stationery: '#EFA1AA'
+    computers: '#FDE380'
+    pet_shop: '#D3B3DA'
+    musical_instruments: '#9EE5E5'
+    small_appliances: '#D1C6BC'
+    unknown: '#454E7C'
+    electronics: '#5AC189'
+    consoles_games: '#FF7F44'
+    fashion_bags_accessories: '#666666'
+    construction_tools_construction: '#E04355'
+    luggage_accessories: '#FCC700'
+    home_appliances_2: '#A868B7'
+    home_construction: '#3CCCCB'
+    home_appliances: '#A38F79'
+    agro_industry_and_commerce: '#8FD3E4'
+    furniture_living_room: '#A1A6BD'
+    fixed_telephony: '#ACE1C4'
+    home_confort: '#FEC0A1'
+    air_conditioning: '#B2B2B2'
+    audio: '#EFA1AA'
+    small_appliances_home_oven_and_coffee: '#FDE380'
+    books_general_interest: '#D3B3DA'
+    kitchen_dining_laundry_garden_furniture: '#9EE5E5'
+    construction_tools_lights: '#D1C6BC'
+    construction_tools_safety: '#D1C6BC'
+    industry_commerce_and_business: '#454E7C'
+    food: '#5AC189'
+    market_place: '#FF7F44'
+    costruction_tools_garden: '#666666'
+    art: '#E04355'
+    fashion_shoes: '#FCC700'
+    drinks: '#A868B7'
+    signaling_and_security: '#3CCCCB'
+    furniture_bedroom: '#A38F79'
+    books_technical: '#8FD3E4'
+    costruction_tools_tools: '#A1A6BD'
+    food_drink: '#ACE1C4'
+    fashion_male_clothing: '#FEC0A1'
+    fashion_underwear_beach: '#B2B2B2'
+    christmas_supplies: '#EFA1AA'
+    tablets_printing_image: '#FDE380'
+    cine_photo: '#D3B3DA'
+    music: '#9EE5E5'
+    dvds_blu_ray: '#9EE5E5'
+    books_imported: '#D1C6BC'
+    party_supplies: '#454E7C'
+    furniture_mattress_and_upholstery: '#5AC189'
+    portateis_cozinha_e_preparadores_de_alimentos: '#FF7F44'
+    fashio_female_clothing: '#666666'
+    fashion_sport: '#E04355'
+    la_cuisine: '#FCC700'
+    arts_and_craftmanship: '#A868B7'
+    diapers_and_hygiene: '#3CCCCB'
+    pc_gamer: '#A38F79'
+    flowers: '#8FD3E4'
+    home_comfort_2: '#A1A6BD'
+    cds_dvds_musicals: '#ACE1C4'
+    fashion_childrens_clothes: '#FEC0A1'
+    security_and_services: '#B2B2B2'
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors: []
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+theme_uuid: null
+version: 1.0.0

@@ -1,0 +1,15 @@
+database_name: olist
+sqlalchemy_uri: mysql+mysqldb://superset:XXXXXXXXXX@host.docker.internal:3306/olist
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+impersonate_user: false
+configuration_method: dynamic_form
+uuid: e876e49d-35b8-4952-9869-fcc7afef96b8
+version: 1.0.0

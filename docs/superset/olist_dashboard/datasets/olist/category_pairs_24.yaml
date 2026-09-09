@@ -1,0 +1,96 @@
+table_name: category_pairs
+main_dttm_col: null
+currency_code_column: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: null
+schema: ''
+sql: "WITH oc AS (\n    SELECT DISTINCT order_id, product_category AS cat\n    FROM\
+  \ mart_order_items\n    WHERE product_category IS NOT NULL\n      AND product_category\
+  \ <> 'unknown'\n),\nmulti AS (\n    SELECT oc.order_id, oc.cat\n    FROM oc\n  \
+  \  JOIN (\n        SELECT order_id FROM oc GROUP BY order_id HAVING COUNT(*) > 1\n\
+  \    ) m ON m.order_id = oc.order_id\n),\ncat_n AS (\n    SELECT cat, COUNT(*) AS\
+  \ c FROM multi GROUP BY cat\n),\ntotal AS (\n    SELECT COUNT(DISTINCT order_id)\
+  \ AS n FROM multi\n)\nSELECT\n    a.cat                                        AS\
+  \ category_a,\n    b.cat                                        AS category_b,\n\
+  \    COUNT(*)                                     AS pair_orders,\n    ROUND(COUNT(*)\
+  \ * t.n / (ca.c * cb.c), 2)     AS lift\nFROM multi a\nJOIN multi b  ON b.order_id\
+  \ = a.order_id AND b.cat <> a.cat\nJOIN cat_n ca ON ca.cat = a.cat\nJOIN cat_n cb\
+  \ ON cb.cat = b.cat\nCROSS JOIN total t\nGROUP BY a.cat, b.cat, ca.c, cb.c, t.n\n\
+  HAVING COUNT(*) >= 5\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+folders: null
+uuid: 12852803-f18f-4666-86b4-3deba1f8a69a
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: lift
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: NEWDECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: null
+- column_name: category_a
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VAR_STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: null
+- column_name: category_b
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VAR_STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: null
+- column_name: pair_orders
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGLONG
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: null
+version: 1.0.0
+database_uuid: e876e49d-35b8-4952-9869-fcc7afef96b8

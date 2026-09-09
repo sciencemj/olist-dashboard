@@ -1,0 +1,77 @@
+slice_name: Orders Count Map By Grid
+description: null
+certified_by: null
+certification_details: null
+viz_type: deck_screengrid
+params:
+  datasource: 22__table
+  viz_type: deck_screengrid
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  spatial:
+    type: latlong
+    latCol: customer_lat
+    lonCol: customer_lng
+  size: count
+  row_limit: 10000
+  filter_nulls: true
+  adhoc_filters:
+  - clause: WHERE
+    subject: order_purchase_timestamp
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  tooltip_contents: []
+  tooltip_template: ''
+  mapbox_style: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+  autozoom: true
+  viewport:
+    longitude: 6.85236157047845
+    latitude: 31.222656842808707
+    zoom: 1
+    bearing: 0
+    pitch: 0
+  grid_size: 20
+  color_scheme_type: default
+  color_picker:
+    r: 0
+    g: 122
+    b: 135
+    a: 1
+  color_scheme: supersetColors
+  js_columns: []
+  js_data_mutator: ''
+  js_tooltip: ''
+  js_onclick_href: ''
+  extra_form_data: {}
+  dashboards:
+  - 10
+query_context: '{"datasource":{"id":22,"type":"table"},"force":false,"queries":[{"filters":[{"col":"order_purchase_timestamp","op":"TEMPORAL_RANGE","val":"No
+  filter"},{"col":"customer_lng","op":"IS NOT NULL","val":null},{"col":"customer_lat","op":"IS
+  NOT NULL","val":null}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["customer_lng","customer_lat"],"metrics":["count"],"orderby":[["count",false]],"annotation_layers":[],"row_limit":10000,"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":false}],"form_data":{"datasource":"22__table","viz_type":"deck_screengrid","matrixify_enable":false,"matrixify_mode_columns":"disabled","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_all_sort_by_columns":"a_to_z","matrixify_topn_order_columns":true,"matrixify_show_column_headers":true,"matrixify_fit_columns_dynamically":true,"matrixify_mode_rows":"disabled","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_all_sort_by_rows":"a_to_z","matrixify_topn_order_rows":true,"matrixify_show_row_labels":true,"matrixify_row_height":300,"matrixify_charts_per_row":4,"matrixify_cell_title_template":"","spatial":{"type":"latlong","latCol":"customer_lat","lonCol":"customer_lng"},"size":"count","row_limit":10000,"filter_nulls":true,"adhoc_filters":[{"clause":"WHERE","subject":"order_purchase_timestamp","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"tooltip_contents":[],"tooltip_template":"","mapbox_style":"https://tile.openstreetmap.org/{z}/{x}/{y}.png","autozoom":true,"viewport":{"longitude":6.85236157047845,"latitude":31.222656842808707,"zoom":1,"bearing":0,"pitch":0},"grid_size":20,"color_scheme_type":"default","color_picker":{"r":0,"g":122,"b":135,"a":1},"color_scheme":"supersetColors","js_columns":[],"js_data_mutator":"","js_tooltip":"","js_onclick_href":"","extra_form_data":{},"dashboards":[10],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 6d5ff5f8-124d-4f0a-b7af-c58571df8d15
+version: 1.0.0
+dataset_uuid: 968b86ad-6214-45e5-9d6b-94d10c4d13da
